@@ -1,34 +1,36 @@
 // Ask the user for a name
 // Ask the user how many times we should say hello
-// say hello the number of times specified
-// if the user's name is Sam, say "Hi there Sam I Am"
-// added: ask the user if they want to be greeted!
+// Say hello the number of times specified
+// If the user's name is Sam, say "Hi there Sam I am!"
+// Ask the user if they want to be greeted
 
-const greetBoolean = confirm('Do you want to be greeted?')
+//Part 1
+// let userName = prompt("What's your name?")
+// let numberOfHellos = prompt("How many times should we say hello?")
 
-// let n = 1
-// while (n <= numberOfHellos) {
-//   console.log(`Hello ${userName}`)
+// while (numberOfHellos > 0) {
+//   if (userName === "Sam"){
+//     console.log("Hi there Sam I am.")
+//   } else {
+//     console.log(`Hi ${userName}`)
+//   }
+//   numberOfHellos--
 // }
 
-if (greetBoolean) {
-  const userName = prompt("Hello and welcome! What's your name?")
-  const formattedUserName = userName.trim()
-  // if (formattedUserName !== null && formattedUserName !== '') {
-  // if (!!formattedUserName === true) {
-  // if (!!formattedUserName) {
-  if (formattedUserName) {
-    let numberOfHellos = prompt('How many times should we greet you?')
+//Part 2
+let greetConfirmation = confirm("Would you like to be greeted?");
 
-    while (numberOfHellos > 0) {
-      if (formattedUserName === 'Sam') {
-        console.log(`Hello Sam I Am on hello #${numberOfHellos}`)
-      } else {
-        console.log(`Hello ${formattedUserName} on hello #${numberOfHellos}`)
-      }
-      numberOfHellos--
+if (greetConfirmation) {
+  let userName = prompt("What's your name?");
+  let numberOfHellos = prompt("How many times should we say hello?");
+  while (numberOfHellos > 0) {
+    if (userName === "Sam") {
+      console.log("Hi there Sam I am!");
+    } else {
+      console.log(`Hi ${userName}!`);
     }
-  } else {
-    console.log('Next time, please give us your name.')
+    numberOfHellos--;
   }
+} else {
+  console.log("Ok maybe tomorrow. Bye!");
 }
